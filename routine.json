@@ -1,0 +1,214 @@
+{
+  "day_1": {
+    "order": [
+      "barbell_bench",
+      "incline_dumbbell_press",
+      "bent_over_row",
+      "wide_grip_pullups",
+      "seated_overhead_press",
+      "barbell_curl",
+      "skullcrusher"
+    ],
+    "barbell_bench": {
+      "type": "barbell_standard",
+      "rest": "3-5 minutes",
+      "warmup": [
+        {
+          "ratio": 0.4,
+          "reps": 8
+        },
+        {
+          "ratio": 0.6,
+          "reps": 5
+        },
+        {
+          "ratio": 0.8,
+          "reps": 3
+        },
+        {
+          "ratio": 0.9,
+          "reps": 1
+        }
+      ],
+      "working_sets": {
+        "sets": 4,
+        "reps": 5
+      }
+    },
+    "incline_dumbbell_press": {
+      "type": "dumbbell",
+      "rest": "2-3 minutes",
+      "warmup": [
+        {
+          "ratio": 0.5,
+          "reps": 8
+        },
+        {
+          "ratio": 0.75,
+          "reps": 5
+        }
+      ],
+      "working_sets": {
+        "sets": 4,
+        "reps": 8
+      }
+    },
+    "bent_over_row": {
+      "type": "barbell_standard",
+      "rest": "3-5 minutes",
+      "warmup": [
+        {
+          "ratio": 0.4,
+          "reps": 8
+        },
+        {
+          "ratio": 0.6,
+          "reps": 5
+        },
+        {
+          "ratio": 0.8,
+          "reps": 3
+        }
+      ],
+      "working_sets": {
+        "sets": 4,
+        "reps": 5
+      }
+    },
+    "wide_grip_pullups": {
+      "type": "body",
+      "rest": "90-120 seconds",
+      "working_sets": {
+        "sets": 4,
+        "reps": 10
+      }
+    },
+    "seated_overhead_press": {
+      "type": "barbell_standard",
+      "rest": "2-3 minutes",
+      "warmup": [
+        {
+          "ratio": 0.5,
+          "reps": 8
+        },
+        {
+          "ratio": 0.75,
+          "reps": 3
+        }
+      ],
+      "working_sets": {
+        "sets": 3,
+        "reps": 6
+      }
+    },
+    "barbell_curl": {
+      "type": "barbell_ez_curl",
+      "rest": "90-120 seconds",
+      "warmup": [
+        {
+          "ratio": 0.5,
+          "reps": 8
+        }
+      ],
+      "working_sets": {
+        "sets": 3,
+        "reps": 8
+      }
+    },
+    "skullcrusher": {
+      "type": "barbell_ez_curl",
+      "rest": "90-120 seconds",
+      "warmup": [
+        {
+          "ratio": 0.5,
+          "reps": 8
+        }
+      ],
+      "working_sets": {
+        "sets": 3,
+        "reps": 8
+      }
+    }
+  },
+  "day_2": {
+    "order": ["squat", "deadlift", "calf_raise", "core", "hip_thrusts"],
+    "squat": {
+      "type": "barbell_standard",
+      "rest": "3-5 minutes",
+      "warmup": [
+        {
+          "ratio": 0.4,
+          "reps": 8
+        },
+        {
+          "ratio": 0.6,
+          "reps": 5
+        },
+        {
+          "ratio": 0.8,
+          "reps": 3
+        },
+        {
+          "ratio": 0.9,
+          "reps": 1
+        }
+      ],
+      "working_sets": {
+        "sets": 4,
+        "reps": 5
+      }
+    },
+    "deadlift": {
+      "type": "barbell_standard",
+      "rest": "2-3 minutes",
+      "warmup": [
+        {
+          "ratio": 0.5,
+          "reps": 5
+        },
+        {
+          "ratio": 0.7,
+          "reps": 3
+        },
+        {
+          "ratio": 0.85,
+          "reps": 1
+        }
+      ],
+      "working_sets": {
+        "sets": 4,
+        "reps": 5
+      }
+    },
+    "calf_raise": {
+      "type": "body",
+      "rest": "90-120 seconds",
+      "working_sets": {
+        "sets": 4,
+        "reps": 10
+      }
+    },
+    "core": {
+      "type": "body",
+      "rest": "90-120 seconds",
+      "working_sets": {
+        "sets": 3,
+        "reps": "35 seconds each"
+      }
+    },
+    "hip_thrusts": {
+      "type": "barbell_standard",
+      "rest": "90-120 seconds",
+      "warmup": [
+        {
+          "ratio": 0.5,
+          "reps": 8
+        }
+      ],
+      "working_sets": {
+        "sets": 3,
+        "reps": 10
+      }
+    }
+  }
+}

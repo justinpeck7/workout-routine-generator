@@ -1,0 +1,17 @@
+{
+  "barbells": {
+    "barbell_standard": 45,
+    "barbell_ez_curl": 14.7
+  },
+  "exercises": {
+    "barbell_bench": 205,
+    "incline_dumbbell_press": 80,
+    "bent_over_row": 115,
+    "seated_overhead_press": 95,
+    "barbell_curl": 65,
+    "skullcrusher": 60,
+    "squat": 185,
+    "deadlift": 205,
+    "hip_thrusts": 135
+  }
+}
