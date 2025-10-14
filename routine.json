@@ -210,5 +210,120 @@
         "reps": 10
       }
     }
+  },
+  "day_3": {
+    "order": [
+      "incline_barbell_bench",
+      "flat_dumbbell_fly",
+      "dips",
+      "bent_over_row",
+      "dumbbell_lateral_raise",
+      "seated_incline_dumbbell_curl",
+      "skullcrusher"
+    ],
+    "incline_barbell_bench": {
+      "type": "barbell_standard",
+      "rest": "2-3 minutes",
+      "warmup": [
+        {
+          "ratio": 0.4,
+          "reps": 10
+        },
+        {
+          "ratio": 0.6,
+          "reps": 8
+        },
+        {
+          "ratio": 0.8,
+          "reps": 5
+        }
+      ],
+      "working_sets": {
+        "sets": 4,
+        "reps": 8
+      }
+    },
+    "flat_dumbbell_fly": {
+      "type": "dumbbell",
+      "rest": "60-90 seconds",
+      "warmup": [
+        {
+          "ratio": 0.5,
+          "reps": 10
+        }
+      ],
+      "working_sets": {
+        "sets": 4,
+        "reps": 8
+      }
+    },
+    "dips": {
+      "type": "body",
+      "rest": "90-120 seconds",
+      "working_sets": {
+        "sets": 4,
+        "reps": 10
+      }
+    },
+    "bent_over_row": {
+      "type": "barbell_standard",
+      "rest": "90-120 seconds",
+      "warmup": [
+        {
+          "ratio": 0.5,
+          "reps": 10
+        },
+        {
+          "ratio": 0.75,
+          "reps": 6
+        }
+      ],
+      "working_sets": {
+        "sets": 4,
+        "reps": 8
+      }
+    },
+    "dumbbell_lateral_raise": {
+      "type": "dumbbell",
+      "rest": "60-90 seconds",
+      "warmup": [
+        {
+          "ratio": 0.5,
+          "reps": 10
+        }
+      ],
+      "working_sets": {
+        "sets": 4,
+        "reps": 8
+      }
+    },
+    "seated_incline_dumbbell_curl": {
+      "type": "dumbbell",
+      "rest": "60-90 seconds",
+      "warmup": [
+        {
+          "ratio": 0.5,
+          "reps": 10
+        }
+      ],
+      "working_sets": {
+        "sets": 4,
+        "reps": 8
+      }
+    },
+    "skullcrusher": {
+      "type": "dumbbell",
+      "rest": "60-90 seconds",
+      "warmup": [
+        {
+          "ratio": 0.5,
+          "reps": 10
+        }
+      ],
+      "working_sets": {
+        "sets": 4,
+        "reps": 8
+      }
+    }
   }
 }

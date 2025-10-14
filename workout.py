@@ -29,10 +29,9 @@ def snake_to_caps(str):
     return str.replace("_", " ").title()
 
 
-def create_routine(routine_cfg, weights):
-    days = ["day_1", "day_2"]
+def create_routine(routine_cfg, weights_cfg):
     steps = []
-    for day in days:
+    for day in ["day_1", "day_2", "day_3"]:
         steps.append(snake_to_caps(day))
         daily_cfg = routine_cfg[day]
 
@@ -49,8 +48,8 @@ def create_routine(routine_cfg, weights):
                         if workout_cfg["type"] == "barbell_standard"
                         else "\tEZ Curl Barbell"
                     )
-                    workout_weight = weights["exercises"][workout]
-                    bar_weight = weights["barbells"][workout_cfg["type"]]
+                    workout_weight = weights_cfg["exercises"][day][workout]
+                    bar_weight = weights_cfg["barbells"][workout_cfg["type"]]
 
                     steps.append("\n\tWarmup:")
 
@@ -67,7 +66,7 @@ def create_routine(routine_cfg, weights):
 
                 # Dumbbell workouts
                 case "dumbbell":
-                    workout_weight = weights["exercises"][workout]
+                    workout_weight = weights_cfg["exercises"][day][workout]
 
                     steps.append("\n\tWarmup:")
 
@@ -95,9 +94,13 @@ def create_routine(routine_cfg, weights):
 
 
 if __name__ == "__main__":
-    with open("./routine.json") as routine_cfg, open("./weights.json") as weights_cfg:
-        routine_cfg = json.load(routine_cfg)
-        weights = json.load(weights_cfg)
-        steps = create_routine(routine_cfg, weights)
+    with (
+        open("./routine.json") as routine_cfg_file,
+        open("./weights.json") as weights_cfg_file,
+    ):
+        routine_cfg = json.load(routine_cfg_file)
+        weights_cfg = json.load(weights_cfg_file)
+
+        steps = create_routine(routine_cfg, weights_cfg)
         with open("./routine.txt", "w") as routine_file:
             routine_file.write("\n".join(steps))

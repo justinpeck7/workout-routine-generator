@@ -4,14 +4,26 @@
     "barbell_ez_curl": 14.7
   },
   "exercises": {
-    "barbell_bench": 205,
-    "incline_dumbbell_press": 80,
-    "bent_over_row": 115,
-    "seated_overhead_press": 95,
-    "barbell_curl": 65,
-    "skullcrusher": 60,
-    "squat": 185,
-    "deadlift": 205,
-    "hip_thrusts": 135
+    "day_1": {
+      "barbell_bench": 205,
+      "incline_dumbbell_press": 80,
+      "bent_over_row": 115,
+      "seated_overhead_press": 95,
+      "barbell_curl": 65,
+      "skullcrusher": 60
+    },
+    "day_2": {
+      "squat": 185,
+      "deadlift": 205,
+      "hip_thrusts": 135
+    },
+    "day_3": {
+      "incline_barbell_bench": 95,
+      "flat_dumbbell_fly": 70,
+      "bent_over_row": 95,
+      "dumbbell_lateral_raise": 40,
+      "seated_incline_dumbbell_curl": 50,
+      "skullcrusher": 60
+    }
   }
 }
