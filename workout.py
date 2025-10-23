@@ -22,7 +22,12 @@ def get_plates(total_weight, bar_weight):
     plates_str = ", ".join(f"{plate}x{count}" for plate, count in plate_count.items())
     leftover_str = f", {side_weight:.1f} lbs leftover" if side_weight > 0.01 else ""
 
-    return f"{plates_str}{leftover_str}"
+    return f"{plates_str}"
+
+
+def get_dumbbells(total_weight):
+    each_side = total_weight / 2
+    return 5 * round(each_side / 5)
 
 
 def snake_to_caps(str):
@@ -31,7 +36,7 @@ def snake_to_caps(str):
 
 def create_routine(routine_cfg, weights_cfg):
     steps = []
-    for day in ["day_1", "day_2", "day_3"]:
+    for day in ["day_1", "day_2", "day_3", "day_4"]:
         steps.append(snake_to_caps(day))
         daily_cfg = routine_cfg[day]
 
@@ -71,13 +76,15 @@ def create_routine(routine_cfg, weights_cfg):
                     steps.append("\n\tWarmup:")
 
                     for warmup_step in workout_cfg["warmup"]:
-                        warmup_weight = warmup_step["ratio"] * workout_weight
+                        warmup_weight = get_dumbbells(
+                            warmup_step["ratio"] * workout_weight
+                        )
                         steps.append(
-                            f"\t\t- {warmup_step['reps']} reps of ~{warmup_weight} lbs"
+                            f"\t\t- {warmup_step['reps']} reps of ~{warmup_weight} lbs each dumbbell"
                         )
                     steps.append("\n\tWorking Sets:")
                     steps.append(
-                        f"\t\t- {working_sets_cfg['sets']} sets of {working_sets_cfg["reps"]} at {workout_weight} lbs"
+                        f"\t\t- {working_sets_cfg['sets']} sets of {working_sets_cfg["reps"]} at {get_dumbbells(workout_weight)} lbs each dumbbell"
                     )
 
                 case "body":

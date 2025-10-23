@@ -262,7 +262,7 @@
       "rest": "90-120 seconds",
       "working_sets": {
         "sets": 4,
-        "reps": 10
+        "reps": 12
       }
     },
     "bent_over_row": {
@@ -294,7 +294,7 @@
       ],
       "working_sets": {
         "sets": 4,
-        "reps": 8
+        "reps": 10
       }
     },
     "seated_incline_dumbbell_curl": {
@@ -312,7 +312,7 @@
       }
     },
     "skullcrusher": {
-      "type": "dumbbell",
+      "type": "barbell_ez_curl",
       "rest": "60-90 seconds",
       "warmup": [
         {
@@ -323,6 +323,79 @@
       "working_sets": {
         "sets": 4,
         "reps": 8
+      }
+    }
+  },
+  "day_4": {
+    "order": ["front_squat", "dumbbell_lunge", "core", "calf_raise", "shrugs"],
+    "front_squat": {
+      "type": "barbell_standard",
+      "rest": "3-5 minutes",
+      "warmup": [
+        {
+          "ratio": 0.4,
+          "reps": 10
+        },
+        {
+          "ratio": 0.6,
+          "reps": 8
+        },
+        {
+          "ratio": 0.8,
+          "reps": 5
+        }
+      ],
+      "working_sets": {
+        "sets": 4,
+        "reps": 8
+      }
+    },
+    "dumbbell_lunge": {
+      "type": "dumbbell",
+      "rest": "90-120 seconds",
+      "warmup": [
+        {
+          "ratio": 0.5,
+          "reps": 8
+        },
+        {
+          "ratio": 0.75,
+          "reps": 5
+        }
+      ],
+      "working_sets": {
+        "sets": 4,
+        "reps": 8
+      }
+    },
+    "core": {
+      "type": "body",
+      "rest": "90-120 seconds",
+      "working_sets": {
+        "sets": 3,
+        "reps": "35 seconds each"
+      }
+    },
+    "calf_raise": {
+      "type": "body",
+      "rest": "90-120 seconds",
+      "working_sets": {
+        "sets": 4,
+        "reps": 12
+      }
+    },
+    "shrugs": {
+      "type": "dumbbell",
+      "rest": "60-90 seconds",
+      "warmup": [
+        {
+          "ratio": 0.5,
+          "reps": 10
+        }
+      ],
+      "working_sets": {
+        "sets": 4,
+        "reps": 10
       }
     }
   }
