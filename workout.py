@@ -20,7 +20,7 @@ def get_plates(total_weight, bar_weight):
         return "No plates needed"
 
     plates_str = ", ".join(f"{plate}x{count}" for plate, count in plate_count.items())
-    leftover_str = f", {side_weight:.1f} lbs leftover" if side_weight > 0.01 else ""
+    # leftover_str = f", {side_weight:.1f} lbs leftover" if side_weight > 0.01 else ""
 
     return f"{plates_str}"
 
@@ -47,22 +47,25 @@ def create_routine(routine_cfg, weights_cfg):
 
             match workout_cfg["type"]:
                 # Barbell workouts
-                case "barbell_standard" | "barbell_ez_curl":
-                    steps.append(
-                        "\tStandard Barbell"
-                        if workout_cfg["type"] == "barbell_standard"
-                        else "\tEZ Curl Barbell"
-                    )
+                case "barbell_standard" | "barbell_ez_curl" | "trap_bar":
+                    bar_types = {
+                        "barbell_standard": "\tStandard Barbell",
+                        "barbell_ez_curl": "\tEZ Curl Barbell",
+                        "trap_bar": "\tTrap Bar",
+                    }
+                    steps.append(bar_types[workout_cfg["type"]])
+
                     workout_weight = weights_cfg["exercises"][day][workout]
                     bar_weight = weights_cfg["barbells"][workout_cfg["type"]]
 
-                    steps.append("\n\tWarmup:")
+                    if workout_cfg.get("warmup", None):
+                        steps.append("\n\tWarmup:")
 
-                    for warmup_step in workout_cfg["warmup"]:
-                        warmup_weight = warmup_step["ratio"] * workout_weight
-                        steps.append(
-                            f"\t\t- {warmup_step['reps']} reps of ~{warmup_weight} lbs ({get_plates(warmup_weight, bar_weight)})"
-                        )
+                        for warmup_step in workout_cfg["warmup"]:
+                            warmup_weight = warmup_step["ratio"] * workout_weight
+                            steps.append(
+                                f"\t\t- {warmup_step['reps']} reps of ~{warmup_weight} lbs ({get_plates(warmup_weight, bar_weight)})"
+                            )
 
                     steps.append("\n\tWorking Sets:")
                     steps.append(

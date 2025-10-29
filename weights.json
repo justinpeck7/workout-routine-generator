@@ -11,11 +11,12 @@
       "bent_over_row": 135,
       "seated_overhead_press": 105,
       "barbell_curl": 75,
-      "skullcrusher": 60
+      "skullcrusher": 70
     },
     "day_2": {
       "squat": 185,
-      "deadlift": 205,
+      "deadlift": 190,
+      "calf_raise": 190,
       "hip_thrusts": 135
     },
     "day_3": {
@@ -23,8 +24,8 @@
       "flat_dumbbell_fly": 70,
       "bent_over_row": 95,
       "dumbbell_lateral_raise": 50,
-      "seated_incline_dumbbell_curl": 50,
-      "skullcrusher": 50
+      "seated_incline_dumbbell_curl": 60,
+      "skullcrusher": 65
     },
     "day_4": {
       "front_squat": 85,
