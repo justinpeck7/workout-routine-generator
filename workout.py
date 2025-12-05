@@ -4,7 +4,7 @@ import math
 
 def get_plates(total_weight, bar_weight):
     if total_weight < bar_weight:
-        return f"Total weight ({total_weight} lbs) is less than bar weight ({bar_weight} lbs)"
+        return "Just the bar"
 
     plates = [45, 35, 25, 10, 5, 2.5]
     plate_count = {}
@@ -19,10 +19,7 @@ def get_plates(total_weight, bar_weight):
     if not plate_count:
         return "No plates needed"
 
-    plates_str = ", ".join(f"{plate}x{count}" for plate, count in plate_count.items())
-    # leftover_str = f", {side_weight:.1f} lbs leftover" if side_weight > 0.01 else ""
-
-    return f"{plates_str}"
+    return ", ".join(f"{plate}x{count}" for plate, count in plate_count.items())
 
 
 def get_dumbbells(total_weight):
@@ -37,11 +34,11 @@ def snake_to_caps(str):
 def create_routine(routine_cfg, weights_cfg):
     steps = []
     for day in ["day_1", "day_2", "day_3", "day_4"]:
-        steps.append(snake_to_caps(day))
+        steps.append(f"# {snake_to_caps(day)}")
         daily_cfg = routine_cfg[day]
 
         for workout in daily_cfg["order"]:
-            steps.append(f"\n## {snake_to_caps(workout)}")
+            steps.append(f"\n### {snake_to_caps(workout)}")
             workout_cfg = daily_cfg[workout]
             working_sets_cfg = workout_cfg["working_sets"]
 
@@ -49,55 +46,60 @@ def create_routine(routine_cfg, weights_cfg):
                 # Barbell workouts
                 case "barbell_standard" | "barbell_ez_curl" | "trap_bar":
                     bar_types = {
-                        "barbell_standard": "\tStandard Barbell",
-                        "barbell_ez_curl": "\tEZ Curl Barbell",
-                        "trap_bar": "\tTrap Bar",
+                        "barbell_standard": "Standard Barbell",
+                        "barbell_ez_curl": "EZ Curl Barbell",
+                        "trap_bar": "Trap Bar",
                     }
-                    steps.append(bar_types[workout_cfg["type"]])
+                    steps.append(f"*{bar_types[workout_cfg["type"]]}*")
 
                     workout_weight = weights_cfg["exercises"][day][workout]
                     bar_weight = weights_cfg["barbells"][workout_cfg["type"]]
 
                     if workout_cfg.get("warmup", None):
-                        steps.append("\n\tWarmup:")
+                        steps.append("Warmup:")
 
                         for warmup_step in workout_cfg["warmup"]:
                             warmup_weight = warmup_step["ratio"] * workout_weight
                             steps.append(
-                                f"\t\t- {warmup_step['reps']} reps of ~{warmup_weight} lbs ({get_plates(warmup_weight, bar_weight)})"
+                                f"- [ ] {warmup_step['reps']} reps of ~{warmup_weight} lbs ({get_plates(warmup_weight, bar_weight)})"
                             )
 
-                    steps.append("\n\tWorking Sets:")
                     steps.append(
-                        f"\t\t- {working_sets_cfg['sets']} sets of {working_sets_cfg["reps"]} at {workout_weight} lbs ({get_plates(workout_weight, bar_weight)})"
+                        f"\nWorking Sets: {working_sets_cfg['sets']} sets of {working_sets_cfg["reps"]} at {workout_weight} lbs ({get_plates(workout_weight, bar_weight)})"
                     )
+                    for i in range(working_sets_cfg["sets"]):
+                        steps.append(f"- [ ] Set {i+1}")
 
                 # Dumbbell workouts
                 case "dumbbell":
                     workout_weight = weights_cfg["exercises"][day][workout]
+                    steps.append("*Dumbbell*")
 
-                    steps.append("\n\tWarmup:")
+                    steps.append("Warmup:")
 
                     for warmup_step in workout_cfg["warmup"]:
                         warmup_weight = get_dumbbells(
                             warmup_step["ratio"] * workout_weight
                         )
                         steps.append(
-                            f"\t\t- {warmup_step['reps']} reps of ~{warmup_weight} lbs each dumbbell"
+                            f"- [ ] {warmup_step['reps']} reps of ~{warmup_weight} lbs each dumbbell"
                         )
-                    steps.append("\n\tWorking Sets:")
                     steps.append(
-                        f"\t\t- {working_sets_cfg['sets']} sets of {working_sets_cfg["reps"]} at {get_dumbbells(workout_weight)} lbs each dumbbell"
+                        f"\nWorking Sets: {working_sets_cfg['sets']} sets of {working_sets_cfg["reps"]} at {get_dumbbells(workout_weight)} lbs each dumbbell"
                     )
+                    for i in range(working_sets_cfg["sets"]):
+                        steps.append(f"- [ ] Set {i+1}")
 
                 case "body":
-                    steps.append("\n\tWarmup: None")
-                    steps.append("\n\tWorking Sets:")
+                    steps.append("*Body Weight*")
+                    steps.append("Warmup: None")
                     steps.append(
-                        f"\t\t- {working_sets_cfg['sets']} sets of {working_sets_cfg["reps"]}"
+                        f"\nWorking Sets: {working_sets_cfg['sets']} sets of {working_sets_cfg["reps"]}"
                     )
+                    for i in range(working_sets_cfg["sets"]):
+                        steps.append(f"- [ ] Set {i+1}")
 
-            steps.append(f"\tRest {workout_cfg['rest']} between each set")
+            steps.append(f"Rest {workout_cfg['rest']} between each set")
         steps.append("\n")
 
     return steps
