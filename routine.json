@@ -79,7 +79,7 @@
       "rest": "90-120 seconds",
       "working_sets": {
         "sets": 4,
-        "reps": 10
+        "reps": 12
       }
     },
     "barbell_curl": {
@@ -376,7 +376,7 @@
       "rest": "90-120 seconds",
       "working_sets": {
         "sets": 4,
-        "reps": 12
+        "reps": 15
       }
     },
     "shrugs": {
@@ -384,7 +384,7 @@
       "rest": "60-90 seconds",
       "working_sets": {
         "sets": 4,
-        "reps": 10
+        "reps": 15
       }
     }
   }

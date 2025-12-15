@@ -19,18 +19,18 @@
       "hip_thrusts": 135
     },
     "day_3": {
-      "incline_barbell_bench": 130,
+      "incline_barbell_bench": 135,
       "seated_overhead_press": 105,
       "bent_over_row": 115,
       "dumbbell_lateral_raise": 50,
       "seated_incline_dumbbell_curl": 70
     },
     "day_4": {
-      "front_squat": 95,
+      "front_squat": 105,
       "dumbbell_lunge": 70,
-      "upright_row": 60,
-      "shrugs": 190,
-      "calf_raise": 190
+      "upright_row": 65,
+      "shrugs": 210,
+      "calf_raise": 210
     }
   }
 }

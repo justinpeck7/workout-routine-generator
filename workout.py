@@ -114,5 +114,5 @@ if __name__ == "__main__":
         weights_cfg = json.load(weights_cfg_file)
 
         steps = create_routine(routine_cfg, weights_cfg)
-        with open("./routine.txt", "w") as routine_file:
+        with open("./routine.md", "w") as routine_file:
             routine_file.write("\n".join(steps))
