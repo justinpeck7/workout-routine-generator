@@ -9,7 +9,7 @@
       "barbell_bench": 215,
       "incline_dumbbell_press": 110,
       "bent_over_row": 155,
-      "barbell_curl": 70,
+      "barbell_curl": 75,
       "skullcrusher": 70
     },
     "day_2": {
@@ -19,9 +19,9 @@
       "hip_thrusts": 135
     },
     "day_3": {
-      "incline_barbell_bench": 135,
+      "incline_barbell_bench": 140,
       "seated_overhead_press": 110,
-      "bent_over_row": 120,
+      "bent_over_row": 125,
       "dumbbell_lateral_raise": 60,
       "seated_incline_dumbbell_curl": 70
     },
