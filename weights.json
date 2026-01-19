@@ -6,10 +6,10 @@
   },
   "exercises": {
     "day_1": {
-      "barbell_bench": 215,
+      "barbell_bench": 220,
       "incline_dumbbell_press": 110,
       "bent_over_row": 155,
-      "barbell_curl": 75,
+      "barbell_curl": 80,
       "skullcrusher": 70
     },
     "day_2": {

@@ -24,7 +24,7 @@ def get_plates(total_weight, bar_weight):
 
 def get_dumbbells(total_weight):
     each_side = total_weight / 2
-    return 5 * round(each_side / 5)
+    return 2.5 * round(each_side / 2.5)
 
 
 def snake_to_caps(str):
