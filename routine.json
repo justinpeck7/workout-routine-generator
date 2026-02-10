@@ -191,7 +191,7 @@
       "incline_barbell_bench",
       "seated_overhead_press",
       "dips",
-      "bent_over_row",
+      "chest_supported_rows",
       "dumbbell_lateral_raise",
       "seated_incline_dumbbell_curl"
     ],
@@ -237,14 +237,14 @@
     },
     "dips": {
       "type": "body",
-      "rest": "90-120 seconds",
+      "rest": "60-90 seconds",
       "working_sets": {
         "sets": 4,
         "reps": 12
       }
     },
-    "bent_over_row": {
-      "type": "barbell_standard",
+    "chest_supported_rows": {
+      "type": "dumbbell",
       "rest": "90-120 seconds",
       "warmup": [
         {
@@ -293,7 +293,7 @@
   "day_4": {
     "order": [
       "front_squat",
-      "dumbbell_lunge",
+      "bulgarian_split_squat",
       "upright_row",
       "levitation_crunch",
       "calf_raise",
@@ -321,7 +321,7 @@
         "reps": 8
       }
     },
-    "dumbbell_lunge": {
+    "bulgarian_split_squat": {
       "type": "dumbbell",
       "rest": "90-120 seconds",
       "warmup": [

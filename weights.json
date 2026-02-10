@@ -6,7 +6,7 @@
   },
   "exercises": {
     "day_1": {
-      "barbell_bench": 220,
+      "barbell_bench": 225,
       "incline_dumbbell_press": 110,
       "bent_over_row": 155,
       "barbell_curl": 80,
@@ -21,13 +21,13 @@
     "day_3": {
       "incline_barbell_bench": 140,
       "seated_overhead_press": 110,
-      "bent_over_row": 125,
+      "chest_supported_rows": 100,
       "dumbbell_lateral_raise": 60,
       "seated_incline_dumbbell_curl": 70
     },
     "day_4": {
       "front_squat": 105,
-      "dumbbell_lunge": 70,
+      "bulgarian_split_squat": 70,
       "upright_row": 70,
       "shrugs": 210,
       "calf_raise": 210
