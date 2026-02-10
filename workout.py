@@ -128,7 +128,7 @@ if __name__ == "__main__":
     args = get_args()
     deload = args.deload
     with (
-        open("./routine.json") as routine_cfg_file,
+        open("./routine_augmented.json") as routine_cfg_file,
         open("./weights.json") as weights_cfg_file,
     ):
         routine_cfg = json.load(routine_cfg_file)
