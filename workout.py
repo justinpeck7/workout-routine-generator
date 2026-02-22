@@ -40,6 +40,8 @@ def create_routine(routine_cfg, weights_cfg, deload=False):
         sets_mult = 0.5
 
     steps = []
+    if deload:
+        steps.append("# Deload Week")
     for day in ["day_1", "day_2", "day_3", "day_4"]:
         steps.append(f"# {snake_to_caps(day)}")
         daily_cfg = routine_cfg[day]
@@ -50,6 +52,8 @@ def create_routine(routine_cfg, weights_cfg, deload=False):
             working_sets_cfg = workout_cfg["working_sets"]
             sets = math.ceil(working_sets_cfg["sets"] * sets_mult)
             reps = working_sets_cfg["reps"]
+            
+            steps.extend([f"- {note}" for note in workout_cfg.get("notes", [])])
 
             match workout_cfg["type"]:
                 # Barbell workouts
@@ -71,7 +75,9 @@ def create_routine(routine_cfg, weights_cfg, deload=False):
                         steps.append("Warmup:")
 
                         for warmup_step in workout_cfg["warmup"]:
-                            warmup_weight = warmup_step["ratio"] * workout_weight
+                            warmup_weight = math.ceil(
+                                warmup_step["ratio"] * workout_weight
+                            )
                             steps.append(
                                 f"- [ ] {warmup_step['reps']} reps of ~{warmup_weight} lbs ({get_plates(warmup_weight, bar_weight)})"
                             )
@@ -111,8 +117,6 @@ def create_routine(routine_cfg, weights_cfg, deload=False):
                     steps.append(f"\nWorking Sets: {sets} sets of {reps}")
                     for i in range(sets):
                         steps.append(f"- [ ] Set {i+1}")
-
-            steps.append(f"Rest {workout_cfg['rest']} between each set")
         steps.append("\n")
 
     return steps
@@ -128,7 +132,7 @@ if __name__ == "__main__":
     args = get_args()
     deload = args.deload
     with (
-        open("./routine_augmented.json") as routine_cfg_file,
+        open("./routine.json") as routine_cfg_file,
         open("./weights.json") as weights_cfg_file,
     ):
         routine_cfg = json.load(routine_cfg_file)

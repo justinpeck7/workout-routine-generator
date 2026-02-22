@@ -80,7 +80,8 @@
       "working_sets": {
         "sets": 4,
         "reps": 12
-      }
+      },
+      "notes": ["3 sets of 8 if climbing"]
     },
     "barbell_curl": {
       "type": "barbell_ez_curl",
@@ -94,7 +95,8 @@
       "working_sets": {
         "sets": 4,
         "reps": 8
-      }
+      },
+      "notes": ["2 sets of 8 if climbing"]
     },
     "skullcrusher": {
       "type": "barbell_ez_curl",
@@ -174,7 +176,7 @@
       "rest": "90-120 seconds",
       "working_sets": {
         "sets": 4,
-        "reps": 15
+        "reps": 20
       }
     },
     "hip_thrusts": {
@@ -287,7 +289,8 @@
       "working_sets": {
         "sets": 4,
         "reps": 8
-      }
+      },
+      "notes": ["Skip if climbing"]
     }
   },
   "day_4": {
