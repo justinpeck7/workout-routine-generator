@@ -77,15 +77,16 @@
     "wide_grip_pullups": {
       "type": "body",
       "rest": "90-120 seconds",
+      "notes": ["3 sets of 8 if climbing"],
       "working_sets": {
         "sets": 4,
         "reps": 12
-      },
-      "notes": ["3 sets of 8 if climbing"]
+      }
     },
     "barbell_curl": {
       "type": "barbell_ez_curl",
       "rest": "90-120 seconds",
+      "notes": ["2 sets of 8 if climbing"],
       "warmup": [
         {
           "ratio": 0.5,
@@ -95,8 +96,7 @@
       "working_sets": {
         "sets": 4,
         "reps": 8
-      },
-      "notes": ["2 sets of 8 if climbing"]
+      }
     },
     "skullcrusher": {
       "type": "barbell_ez_curl",
@@ -222,6 +222,7 @@
     "seated_overhead_press": {
       "type": "barbell_standard",
       "rest": "2-3 minutes",
+      "notes": ["15-20 reps of band pull-aparts between sets"],
       "warmup": [
         {
           "ratio": 0.5,
@@ -280,6 +281,7 @@
     "seated_incline_dumbbell_curl": {
       "type": "dumbbell",
       "rest": "60-90 seconds",
+      "notes": ["Skip if climbing"],
       "warmup": [
         {
           "ratio": 0.5,
@@ -289,8 +291,7 @@
       "working_sets": {
         "sets": 4,
         "reps": 8
-      },
-      "notes": ["Skip if climbing"]
+      }
     }
   },
   "day_4": {
