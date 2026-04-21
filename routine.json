@@ -114,7 +114,7 @@
     }
   },
   "day_2": {
-    "order": ["squat", "deadlift", "calf_raise", "ab_tuck", "hip_thrusts"],
+    "order": ["squat", "romanian_deadlift", "calf_raise", "ab_tuck", "hip_thrusts"],
     "squat": {
       "type": "barbell_standard",
       "rest": "3-5 minutes",
@@ -141,26 +141,22 @@
         "reps": 5
       }
     },
-    "deadlift": {
-      "type": "trap_bar",
+    "romanian_deadlift": {
+      "type": "barbell_standard",
       "rest": "2-3 minutes",
       "warmup": [
         {
           "ratio": 0.5,
-          "reps": 5
+          "reps": 8
         },
         {
           "ratio": 0.7,
-          "reps": 3
-        },
-        {
-          "ratio": 0.85,
-          "reps": 1
+          "reps": 5
         }
       ],
       "working_sets": {
         "sets": 4,
-        "reps": 5
+        "reps": 8
       }
     },
     "calf_raise": {

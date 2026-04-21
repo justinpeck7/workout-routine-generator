@@ -7,14 +7,14 @@
   "exercises": {
     "day_1": {
       "barbell_bench": 225,
-      "incline_dumbbell_press": 120,
+      "incline_dumbbell_press": 130,
       "bent_over_row": 160,
       "barbell_curl": 80,
       "skullcrusher": 75
     },
     "day_2": {
-      "squat": 200,
-      "deadlift": 210,
+      "squat": 205,
+      "romanian_deadlift": 100,
       "calf_raise": 210,
       "hip_thrusts": 135
     },
