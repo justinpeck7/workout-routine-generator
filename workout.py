@@ -117,6 +117,13 @@ def create_routine(routine_cfg, weights_cfg, deload=False):
                     steps.append(f"\nWorking Sets: {sets} sets of {reps}")
                     for i in range(sets):
                         steps.append(f"- [ ] Set {i+1}")
+
+                case "band":
+                    steps.append("*Band*")
+                    steps.append("Warmup: None")
+                    steps.append(f"\nWorking Sets: {sets} sets of {reps}")
+                    for i in range(sets):
+                        steps.append(f"- [ ] Set {i+1}")
             steps.append(f"Rest {workout_cfg['rest']} between each set")
         steps.append("\n")
 

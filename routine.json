@@ -77,10 +77,10 @@
     "wide_grip_pullups": {
       "type": "body",
       "rest": "90-120 seconds",
-      "notes": ["3 sets of 8 if climbing"],
+      "notes": ["Add 10 lbs", "3 sets of 8 if climbing"],
       "working_sets": {
         "sets": 4,
-        "reps": 12
+        "reps": 10
       }
     },
     "barbell_curl": {
@@ -114,7 +114,13 @@
     }
   },
   "day_2": {
-    "order": ["squat", "romanian_deadlift", "calf_raise", "ab_tuck", "hip_thrusts"],
+    "order": [
+      "squat",
+      "romanian_deadlift",
+      "neck_extensions_and_retractions",
+      "ab_tuck",
+      "hip_thrusts"
+    ],
     "squat": {
       "type": "barbell_standard",
       "rest": "3-5 minutes",
@@ -159,11 +165,11 @@
         "reps": 8
       }
     },
-    "calf_raise": {
-      "type": "trap_bar",
-      "rest": "90-120 seconds",
+    "neck_extensions_and_retractions": {
+      "type": "band",
+      "rest": "60-90 seconds",
       "working_sets": {
-        "sets": 4,
+        "sets": 3,
         "reps": 15
       }
     },
@@ -216,7 +222,7 @@
       }
     },
     "seated_overhead_press": {
-      "type": "barbell_standard",
+      "type": "dumbbell",
       "rest": "2-3 minutes",
       "notes": ["15-20 reps of band pull-aparts between sets"],
       "warmup": [
@@ -261,6 +267,9 @@
       }
     },
     "dumbbell_lateral_raise": {
+      "notes": [
+        "Pretend like you're shoveling sand on each side. Reach down & out through the motion"
+      ],
       "type": "dumbbell",
       "rest": "60-90 seconds",
       "warmup": [
